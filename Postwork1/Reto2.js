@@ -1,3 +1,6 @@
+/*Escribir una función chunk que recibe un arreglo y un número entero size. 
+La función debe dividir el arreglo en múltiples arreglos del tamaño determinado por size.*/
+
 function chunk(array, size) {
     longitud = array.length; 
     let contadorEspacios = 0;  
