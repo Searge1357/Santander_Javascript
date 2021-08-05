@@ -5,19 +5,14 @@ var singers = [
     { name: 'Chris Cornell', band: 'Soundgarden', born: 1964 },
   ];
   
-//console.log(Object.values(singers)[0].band); //Me regresa "Aerosmith"
-//console.log(singers[0]['band']); //Me regresa "Aerosmith"
-
-/*
-function pluck(list, propertyName) {
-    let arregloObjetos = []
-    for(let i = 0; i < Object.keys(list).length; i++){ //Object.keys(list).length me va a decir cuantas propiedades tiene el objeto 
-        arregloObjetos.push(Object.values(list)[i].propertyName) //Va a empujar del objeto lista, la propiedad propertyName del arreglo i
-    }
-    return arregloObjetos; 
-}
-  
-
+  function pluck(list, propertyName) {
+    let newArray = []
+    for(let i=0; i < list.length; i++){ //List.length regresa un 4, ya que es el número de objetos que hay dentor
+      //De esta forma obteneos una propiedad de un arreglo de objetos
+      newArray.push(list[i][propertyName])
+    } 
+    return newArray
+  }
   
   console.log( pluck(singers, 'name') );
   // ["Steven Tyler", "Karen Carpenter", "Kurt Cobain", "Chris Cornell"]
@@ -26,4 +21,4 @@ function pluck(list, propertyName) {
   // ["Aerosmith", "The Carpenters", "Nirvana", "Soundgarden"]
   
   console.log( pluck(singers, 'born') );
-  // [1948, 1950, 1967, 1964] */
+  // [1948, 1950, 1967, 1964]
